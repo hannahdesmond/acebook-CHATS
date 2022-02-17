@@ -1,5 +1,6 @@
 <h1>Posts</h1>
 
+
 <table>
   <thead>
     <tr>
@@ -17,8 +18,8 @@
       <tr>
 
         <td><%= simple_format(post.message) %></td>
-        <td><%= " #{current_user.first_name} #{current_user.surname} " %></td>
-
+       
+       <td><%= " #{User.find(post.user_id).first_name} #{User.find(post.user_id).surname} " %></td>
         <td><%= post.created_at.strftime("%d/%m/%y") %></td>
         <td><%= post.created_at.strftime("%H:%M") %></td>
 
